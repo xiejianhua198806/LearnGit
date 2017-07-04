@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>css连缀功能封装</title>
+	</head>
+
+	<body>
+		<div id="box">12</div>
+
+		<input type="text" name="sex" id="sex" value="23" />
+		<p>你好1</p>
+		<p>你好2</p>
+		<p>你好3</p>
+
+	</body>
+	<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript">
+		//		alert(base.getId("box").innerHTML);
+		//		alert(base.getName("sex")[0].innerHTML);
+		//		alert(base.getTagName("p")[0].innerHTML);
+
+		//这里需要new一个base
+		//var base = new base();   //因为所有的都共用一个对象 ，所以导致 方法都统一
+		$().getId('box').css("color","red").css("backgroundColor","yellow");
+		
+		//获取元素
+		$().getTagName('p').css("color","tan");
+		
+		//改写html内容
+		$().getTagName('p').css("color","tan").html('标题');
+		
+		//增加点击事件
+		$().getTagName('p').css("color","tan").html('标题').click(function (){
+			alert(1);
+		});
+	</script>
+
+</html>

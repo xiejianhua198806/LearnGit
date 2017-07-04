@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>下拉菜单的封装</title>
+	</head>
+	<link rel="stylesheet" href="index.css" />
+	<body>
+		<div class="head clear" >
+			<div class="member">个人中心
+				<ul>
+					<li><a href="###">设置</a></li>
+					<li><a href="###">换肤</a></li>
+					<li><a href="###">帮助</a></li>
+					<li><a href="###">退出</a></li>
+				</ul>
+			</div>
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript">
+		$().getClass('member').hover(function(){
+			$(this).css('background','url(img/2.png)no-repeat 70px center');
+			$().getTagName('ul').show();
+		},function(){
+			$(this).css('background','url(img/3.png)no-repeat 70px center');
+			$().getTagName('ul').hide();
+		});
+	</script>
+
+</html>

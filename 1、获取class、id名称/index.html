@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>获取名称</title>
+	</head>
+	<body>
+		<div id="box">12</div>
+		
+		<input type="text" name="sex" id="sex" value="23" />
+		<p>你好1</p>
+		<p>你好2</p>
+		<p>你好3</p>
+		
+	</body>
+	<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript">
+		alert(base.getId("box").innerHTML);
+		alert(base.getName("sex")[0].innerHTML);
+		alert(base.getTagName("p")[0].innerHTML);
+	</script>
+	
+</html>

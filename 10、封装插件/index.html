@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>拖拽</title>
+	</head>
+	<link rel="stylesheet" href="index.css" />
+
+	<body>
+		<div class="head clear">
+			<div class="member">个人中心
+				<ul style="float:left;" class="member_ul">
+					<li>
+						<a href="###">设置</a>
+					</li>
+					<li>
+						<a href="###">换肤</a>
+					</li>
+					<li>
+						<a href="###">帮助</a>
+					</li>
+					<li>
+						<a href="###">退出</a>
+					</li>
+				</ul>
+			</div>
+			<div class="login">登录</div>
+		</div>
+		<div class="pop-up" id="login">
+			<h2 class="clear">网站登录<a href="###" class="close">X</a></h2>
+			<div class="user">手机：<input type="text" id="user" /></div>
+			<div class="pass">密码：<input type="password" id="user" /></div>
+			<div class="btn"><button>登录</button></div>
+			<div class="other">注册新用户|<span>忘记密码？</span></div>
+		</div>
+		
+		<div class="screen" id="screen"></div>
+	</body>
+	<script type="text/javascript" src="tools.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript" src="index_drag.js"></script>
+	<script type="text/javascript">
+		//下拉菜单
+		$().getClass('member').hover(function() {
+			$(this).css('background', 'url(img/2.png)no-repeat 70px center');
+			$().getClass('member_ul').show();
+		}, function() {
+			$(this).css('background', 'url(img/3.png)no-repeat 70px center');
+			$().getClass('member_ul').hide();
+		});
+
+		//登录框
+		var login = $().getId('login');
+		var screen = $().getId('screen');
+		login.center(350, 250).resize(function() {
+			if(screen.css('display') == 'block') {
+				screen.lock();
+			}
+		});
+		$().getClass('login').click(function() {
+			login.center(350, 250)
+			login.css('display', 'block');
+			screen.lock();
+		});
+		$().getClass('close').click(function() {
+			login.css('display', 'none');
+			screen.unlock();
+		});
+		//拖拽
+		
+		login.drag([$().getTagName('h2').getElement(0)]);
+	</script>
+
+</html>

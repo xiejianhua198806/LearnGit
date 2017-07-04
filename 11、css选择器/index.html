@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>css选择器</title>
+	</head>
+	<link rel="stylesheet" href="index.css" />
+
+	<body>
+		<div id="box">box</div>
+		<p>
+			<span class="a">pspan</span>
+			<span class="b">pspan</span>
+			<span id="b">pspan</span>
+		</p>
+		<p>
+			<span>pspan</span>
+			<span>pspan</span>
+			<span>pspan</span>
+		</p>
+		<div class="a">
+			<span>pspan</span>
+			<span>pspan</span>
+			<span>pspan</span>
+		</div>
+	</body>
+	<script type="text/javascript" src="tools.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript" src="index_drag.js"></script>
+	<script type="text/javascript">
+		//$('#box').css("color","red").click(function(){
+		//		alert($(this).html())
+		//});
+		$('.a').css("color","red");
+		//$('p').css("color", "red");
+		//$('p').find('span').css("color", "red");
+		//$('p').find('.a').css("color", "red");
+		//$('p').find('#b').css("color", "red");
+		$('#box').css("color", "red");
+	</script>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>css基础库的封装</title>
+	</head>
+	<link rel="stylesheet" href="index.css" />
+
+	<body>
+		<div id="box">box</div>
+		
+		<div id="pox">pox</div>
+		
+		<input type="text" name="sex" id="sex" value="23" />
+
+		<div id="aaa">
+			<p class="red">你好1</p>
+			<p class="red">你好2</p>
+			<p class="red">你好3</p>
+		</div>
+
+		<div id="bbb">
+			<p class="red">你好1</p>
+			<p class="red">你好2</p>
+			<p class="red">你好3</p>
+		</div>
+
+		<p class="bbb">你好1</p>
+		<p class="red">你好2</p>
+		<p class="red">你好3</p>
+	</body>
+	<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript">
+		//$().getId('box').html('pox').css("color","red");
+
+		//alert($().getId('box').html())
+
+		//alert($().getId('box').css('color'));
+
+		//alert($().getId('box').css('fontSize'));
+
+		//alert($().getClass('red').elements.length);  //3
+
+		//alert($().getClass('red').getElement(2).elements.length); //1
+
+		//$().getClass('red').getElement(2).css("color","red");
+		
+		//$().getId('aaa').css('color','blue');
+		
+		//$().getClass('bbb').css('color','yellow');
+		
+		//添加class
+		//$().getId('box').addClass('a').addClass('b').addClass('c');
+		
+		//移除class
+		$().getId('box').addClass('a').addClass('b').removeClass('a');
+	</script>
+
+</html>
